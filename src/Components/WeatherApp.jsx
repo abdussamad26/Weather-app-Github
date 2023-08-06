@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './WeatherApp.css'
 
 const WeatherApp = () => {
   const [city, setCity] = useState('');
@@ -22,7 +23,8 @@ const WeatherApp = () => {
 
   return (
     <div>
-      <h1>Weather App</h1>
+      <div className="bg-img">
+      <h1 style={{fontSize:"70px", color:"orange"}}>Weather App</h1>
       <input
         type="text"
         placeholder="Enter city"
@@ -40,6 +42,7 @@ const WeatherApp = () => {
           <p>Weather: {weather.weather[0].description}</p>
         </div>
       )}
+      </div>
     </div>
   );
 };
